@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <title>FriendFinder</title>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.1.1.min.js"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
+  />
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
+  <style>
+    #surveytop {
+      border-bottom: dashed gray 2px;
+      padding: 5px;
+      margin-bottom: 10px;
+      color: gray;
+    }
+    .container {
+      height: 100%;
+    }
+
+    label {
+      font-size: 16px;
+      padding: 5px;
+      margin-top: 10px;
+    }
+
+    #submitbtn {
+      text-align: center;
+      width: 75%;
+      margin: 50px auto;
+      background-color: salmon;
+    }
+    #ap {
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="surveytop">Survey Questions:</h1>
+    <form>
+      <div class="form-group">
+        <label id="questions" for="username">Name(Required)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="Name"
+        />
+      </div>
+      <div class="form-group">
+        <label id="questions" for="userimage"
+          >Link to Photo Image(Required)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="userimage"
+          placeholder="Image"
+        />
+      </div>
+      <label id="questions" for="q1"
+        >1. You follow and enjoy watching sports.</label
+      >
+      <select data-placeholder="" class="browser-default" id="q1">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q2"
+        >2. Being a good listener is one of your fortes.</label
+      >
+      <select data-placeholder="" class="browser-default" id="q2">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q3"
+        >3. You're always up for outdoor adventures.</label
+      >
+      <select data-placeholder="" class="browser-default" id="q3">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q4"
+        >4. You believe that tipping your wait staff is very important even if
+        the service was sub par.</label
+      >
+      <select data-placeholder="" class="browser-default" id="q4">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q5"
+        >5. You are modest about what you have achieved in life.</label
+      >
+      <select data-placeholder="" class="browser-default" id="q5">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q6"
+        >6. You enjoy meeting new people and socializing in an open environment.
+      </label>
+      <select data-placeholder="" class="browser-default" id="q6">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q7"
+        >7. You are willing to admit when you make mistakes or when you're wrong
+        about something.
+      </label>
+      <select data-placeholder="" class="browser-default" id="q7">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q8"
+        >8. You find it easy to stay relaxed and focused even when there is some
+        pressure.
+      </label>
+      <select data-placeholder="" class="browser-default" id="q8">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q9"
+        >9. You believe that honesty and kindess is very important in a partner.
+      </label>
+      <select data-placeholder="" class="browser-default" id="q9">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <label id="questions" for="q10"
+        >10. You respect people's views and decisions if they're not directly
+        affecting you.
+      </label>
+      <select data-placeholder="" class="browser-default" id="q10">
+        <option value="">Choose an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+
+      <button
+        id="submitbtn"
+        class="btn waves-effect waves-light modal-trigger"
+        type="submit"
+        name="action"
+        data-target="popUp"
+      >
+        Submit <i class="material-icons center">send</i>
+      </button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/friends">API Friends List</a> | <a href="">Github Repo</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="popUp"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModal3Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModal3Label">
+            Your Best Friend Match:
+          </h2>
+        </div>
+        <div class="modal-body">
+          <h3 id="userMatch"></h3>
+          <img id="userMatchImage" class="materialboxed" width="650" src="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Activate submit button
+      $("#submitbtn").on("click", function(event) {
+        event.preventDefault();
+
+        var filled = true;
+
+        if ($("#username").val() === "" || $("#userimage").val() === "") {
+          filled = false;
+        } else if (
+          $("#q1").val() === "" ||
+          $("#q2").val() === "" ||
+          $("#q3").val() === "" ||
+          $("#q4").val() === "" ||
+          $("#q5").val() === "" ||
+          $("#q6").val() === "" ||
+          $("#q7").val() === "" ||
+          $("#q8").val() === "" ||
+          $("#q9").val() === "" ||
+          $("#q10").val() === ""
+        ) {
+          filled = false;
+        }
+
+        if (filled === true) {
+
+          var userInput = {
+            name: $("#username")
+              .val()
+              .trim(),
+            photo: $("#userimage")
+              .val()
+              .trim(),
+            scores: [
+              $("#q1")
+                .val()
+                .trim(),
+              $("#q2")
+                .val()
+                .trim(),
+              $("#q3")
+                .val()
+                .trim(),
+              $("#q4")
+                .val()
+                .trim(),
+              $("#q5")
+                .val()
+                .trim(),
+              $("#q6")
+                .val()
+                .trim(),
+              $("#q7")
+                .val()
+                .trim(),
+              $("#q8")
+                .val()
+                .trim(),
+              $("#q9")
+                .val()
+                .trim(),
+              $("#q10")
+                .val()
+                .trim()
+            ]
+          };
+          // Add user inputs to friends list
+          $.post("/api/friends", userInput, function(data) {
+            console.log("response = " + JSON.stringify(data));
+            $("#userMatch").html(data.matchName);
+            $("#userMatchImage").attr("src", data.matchImage);
+            $("#popUp").modal("show");
+          });
+        } else {
+
+          alert("Survey is incomplete! Please continue filling out all fields!");
+        }
+      });
+    });
+  </script>
+</body>
