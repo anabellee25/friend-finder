@@ -10,7 +10,7 @@ Friend Finder is meant to simulate a simple dating app but for friends. This app
 
 You can find the deployed app by following this Heroku link: [click me](https://uwbc-friend-finder.herokuapp.com/)
 
-##Installation
+## Installation
 
 * Clone this repository onto your desktop.
 * cd into your application's folder
