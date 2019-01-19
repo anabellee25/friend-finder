@@ -2,9 +2,9 @@
 
 ## Description
 
-Friend Finder matches you to friends based on how you answer a 10 question survey. When the survey is submitted, an existing user's record closest to the your/or the user's current response is found and returned. The closest set of user responses is defined by the lowest absolute difference for all ten questions combined.
+Friend Finder matches you to friends based on how you answer a 10 question survey. When the survey is submitted, an existing user's record closest to your/or the user's current response is found and returned. The closest set of user responses is defined by the lowest absolute difference for all ten questions combined.
 
-Friend Finder is meant to simulate a simple dating app but for friends. This app comes to life with the help of node.js and Express on the back end, and elements form both Twitter Bootstrap and Materialized on the front end.
+Friend Finder is meant to simulate a simple dating app but for friends. This app comes to life with the help of node.js and Express on the back end, and elements form both Twitter Bootstrap and Materialize on the front end.
 
 ## Demo
 
@@ -22,6 +22,7 @@ To run the application locally and access it in your browser, first set the PORT
 
 After the PORT environment variable has been set, run the Node.js application with the command below.
  * node server.js
+ 
 Once it's run, you can follow the link to the browser that was returned back in your terminal.
 
 ## Languages Used
