@@ -1,6 +1,6 @@
 # friend-finder
 
-##Description
+## Description
 
 Friend Finder matches you to friends based on how you answer a 10 question survey. When the survey is submitted, an existing user's record closest to the your/or the user's current response is found and returned. The closest set of user responses is defined by the lowest absolute difference for all ten questions combined.
 
